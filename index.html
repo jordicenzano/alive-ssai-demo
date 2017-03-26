@@ -1,0 +1,47 @@
+<html>
+   <head>
+       <title>Alive SSAI Demo interface</title>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+       <link href="./css/ssai-demo.css" rel="stylesheet"> <!--Version: 5.14.1 -->
+       <script src="./js/alive-ssai-demo-index.js"></script>
+   </head>
+   <body onload="onLoadPage()">
+   <div class="container">
+       <div id="errorAlert" class="alert alert-danger alert-dismissable fade in" style="display: none;">
+           <a href="#" class="close" data-dismiss="alert">&times;</a>
+           <strong>Error!</strong><div id="errMsg"></div>
+       </div>
+       <div class="jumbotron">
+           <h1>Alive SSAI Demo interface</h1>
+           <p>Enter the following data:</p>
+           <div class="form-group">
+               <label for="env">Environment (automatically selected):</label>
+               <select class="form-control" id="env" disabled>
+                   <option value="qa">QA</option>
+                   <option value="st">Staging</option>
+                   <option value="pr">Production</option>
+               </select>
+           </div>
+           <div class="form-group">
+               <label for="apikey">Api Key:</label>
+               <input type="text" class="form-control" id="apikey">
+           </div>
+           <div class="form-group">
+               <label for="jobid">Job ID:</label>
+               <input type="text" class="form-control" id="jobid">
+           </div>
+           <div class="form-group">
+               <label for="appid">App ID (empty will get the first app available):</label>
+               <input type="text" class="form-control" id="appid">
+           </div>
+           <div class="form-group">
+               <br>
+               <button id="gossai" type="button" onclick="openSSAIdemoBRB()" class="btn btn-success">Start SSAI BRB test UI</button>
+           </div>
+       </div>
+   </div>
+   </body>
+</html>
