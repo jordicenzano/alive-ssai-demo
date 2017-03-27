@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-#TODO: Activate staging UI
-return 0;
-
 DEST_BUCKET="s3://alive-st-brain-ui/test-ssai/ssaiV1"
 
 aws s3 sync . ${DEST_BUCKET} --exclude ".*" --exclude "*.sh"
